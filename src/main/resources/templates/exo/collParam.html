@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul th:unless="${marques.isEmpty()}">
+    <!--<ul th:if="${!persons.isEmpty()}">-->
+    <li th:each="m: ${marques}">
+        <span th:text="${m}"></span>
+
+    </li>
+</ul>
+<p th:if="${marques.isEmpty()}">
+    Il n'y a de marques dans la liste
+</p>
+</body>
+</html>
