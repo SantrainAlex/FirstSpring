@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul th:object="${marque}">
+    <li th:field="*{name}">
+        <span th:text="*{name}"></span>
+    </li>
+
+</ul>
+
+</body>
+</html>
