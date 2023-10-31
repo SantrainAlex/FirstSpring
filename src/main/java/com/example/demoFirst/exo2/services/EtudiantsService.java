@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 public class EtudiantsService implements EtudiantServiceInter {
@@ -28,6 +29,16 @@ public class EtudiantsService implements EtudiantServiceInter {
     public Etudiant getOneEtudiant(int id) {
         for (Etudiant e: lstEtudiants){
             if (e.getId() == id){
+                return e;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public Etudiant getOneEtudiantNom(String nom) {
+        for (Etudiant e: lstEtudiants){
+            if (Objects.equals(e.getNom(), nom)){
                 return e;
             }
         }

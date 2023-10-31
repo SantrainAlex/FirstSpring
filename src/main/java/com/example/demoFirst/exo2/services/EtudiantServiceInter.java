@@ -12,6 +12,7 @@ public interface EtudiantServiceInter {
     List<Etudiant> allEtudiant();
 
     Etudiant getOneEtudiant(int id);
+    Etudiant getOneEtudiantNom(String nom);
 
     Etudiant updateOneEtudiant(int id, Etudiant etudiant);
 

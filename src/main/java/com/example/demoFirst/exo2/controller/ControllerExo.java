@@ -36,6 +36,11 @@ public class ControllerExo {
         return etudiantService.getOneEtudiant(id);
     }
 
+    @GetMapping("/Nom")
+    public Etudiant getEtudiantNom(@RequestBody String nom){
+        return etudiantService.getOneEtudiantNom(nom);
+    }
+
     @PutMapping("/{id}")
     public Etudiant udateEtudiant(@PathVariable int id, @RequestBody Etudiant etudiant){
         return etudiantService.updateOneEtudiant(id, etudiant);
