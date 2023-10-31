@@ -3,8 +3,8 @@ package com.example.demoFirst.services;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service
-@Primary
+@Service("salutation")
+//@Primary
 public class GreetingsServiceFrench implements GreetingService{
 
     @Override
